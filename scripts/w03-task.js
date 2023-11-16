@@ -2,6 +2,7 @@
 
 /* FUNCTIONS */
 /* Function Definition - Add Numbers */
+document.querySelector('#addNumbers').addEventListener('click', addNumbers);
 function add (number1, number2) {
     return number1 + number2;
 }
@@ -13,7 +14,7 @@ function addNumbers () {
     document.querySelector('#sum').value = add(add1, add2);
 }
 
-document.querySelector('#addNumbers').addEventListener('click', addNumbers);
+
 /* Function Expression - Subtract Numbers */
 
 
