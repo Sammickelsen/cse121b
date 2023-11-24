@@ -5,7 +5,7 @@
 /* Step 2 - Variables */
 let fullName = "Samuel Mickelsen";
 let currentYear = 2023;
-let profilePicture = 'images/Sam.jpg';
+let profilePicture = 'images/Sam.JPG';
 
 /* Step 3 - Element Variables */
 const nameElement = document.getElementById('name');
