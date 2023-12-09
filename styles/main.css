@@ -312,4 +312,50 @@ footer {
         max-width: 950px;
     }
 
+    #food {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-gap: .5rem;
+        align-items: center;
+        margin-bottom: 3rem;
+    }
+    
+    #food article {
+        height: 250px;
+        margin: .5rem;
+        border: 1px solid rgba(0, 0, 0, .1);
+        padding: 1rem;
+        background-color: #eee;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #food h4 {
+        color: navy;
+        font-size: smaller;
+    }
+    
+    
+    #food img {
+        width: 150px;
+        height: auto;
+        box-shadow: 0 0 30px #777;
+        margin: .5rem;
+    }
+
+    #searchFood {
+        appearance: none;
+        display: flex;
+        padding: .5rem;
+        font-weight: 700;
+        margin: 1rem auto;
+        width: 200px;
+        border: 1px solid rgba(0, 0, 0, .2);
+        text-align: center;
+        justify-content: center;
+    }
+
+
 }

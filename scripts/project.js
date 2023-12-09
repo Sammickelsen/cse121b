@@ -7,13 +7,11 @@ let foodList = [];
 
 /* async displayTemples Function */
 
-const displayFoods = (foods) => {
+const displayFoods = (food) => {
     
-    foods.orEach( (food) => 
-    {
         let article = document.createElement("article");
         let h3 = document.createElement("h3");
-        h3.textContent = food.meals.strMeal;
+        h3.textContent = food.strMeal;
 
         const img = document.createElement('img');
         img.src = food.strMealThumb;
@@ -22,9 +20,9 @@ const displayFoods = (foods) => {
         article.appendChild(h3);
         article.appendChild(img);
 
-        templesElement.appendChild(article);
-    });
-}
+        foodElement.appendChild(article);
+    };
+
 
 
 
@@ -32,12 +30,17 @@ const displayFoods = (foods) => {
 
 
 const getFoods = async () => {
+    reset();
     let urlBase = "https://www.themealdb.com/api/json/v1/1/filter.php?i=";
-    let foodSelect = String(document.querySelector('#userFood').ariaValueText);
+    let foodSelect = document.querySelector('#userFood').value;
     let fetchUrl = urlBase.concat(foodSelect);
     const response = await fetch(fetchUrl);
-    foodList = await response.json();
-    displayFoods(foodList);
+    let foodList = await response.json();
+    foodList.meals.forEach( food =>
+      {
+        displayFoods(food);  
+      });
+    
 }
 
 /* reset Function */
