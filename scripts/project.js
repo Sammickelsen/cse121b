@@ -1,11 +1,9 @@
-/* W05: Programming Tasks */
-
-/* Declare and initialize global variables */
+/* JS Project */
 
 const foodElement = document.getElementById("food");
 let foodList = [];
 
-/* async displayTemples Function */
+/* displayFoods Function */
 
 const displayFoods = (food) => {
     
@@ -26,7 +24,7 @@ const displayFoods = (food) => {
 
 
 
-/* async getTemples Function using fetch()*/
+/* getFoods function filters and searches for the correct API*/
 
 
 const getFoods = async () => {
@@ -47,10 +45,6 @@ const getFoods = async () => {
 const reset = () => {
     foodElement.innerHTML = "";
 }
-
-/* sortBy Function */
-
-
 
 /* Event Listener */
 document.querySelector('#searchFood').addEventListener("click", getFoods);
